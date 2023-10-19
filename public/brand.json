@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "brand_image": "https://i.ibb.co/CMf0Dk5/pexels-hamza-nouasria-8176112.jpg",
+        "brand_name": "Nike"
+    },
+    {
+        "id": 2,
+        "brand_image": "https://i.ibb.co/NVxFn2F/pexels-kaique-rocha-48013.jpg",
+        "brand_name": "Adidas"
+    },
+    {
+        "id": 3,
+        "brand_image": "https://i.ibb.co/nMcxggj/pexels-jimmy-liao-12602144.jpg",
+        "brand_name": "Gucci"
+    },
+    {
+        "id": 4,
+        "brand_image": "https://i.ibb.co/KLQLy5T/pexels-arthur-swiffen-18362601.jpg",
+        "brand_name": "Zara"
+    },
+    {
+        "id": 5,
+        "brand_image": "https://i.ibb.co/6Zcvkc9/pexels-valeriia-miller-3948026.jpg",
+        "brand_name": "H&M"
+    },
+    {
+        "id": 6,
+        "brand_image": "https://i.ibb.co/Bz5sNgN/pexels-victor-coutant-14528152.jpg",
+        "brand_name": "Levi's"
+    }
+]
