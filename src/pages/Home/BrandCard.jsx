@@ -4,18 +4,6 @@ import { Link } from "react-router-dom";
 
 const BrandCard = ({ card }) => {
     const { brand_image, brand_name } = card;
-    //     const [products,setProducts]=useState([]);
-    // console.log(products);
-    //     const handleBrand=()=>{
-    //         fetch('http://localhost:5000/fashion')
-    //         .then(res=>res.json())
-    //         .then(data=>{
-    //             console.log(data);
-    //             const remaining = data.filter(product=>product.brand_name==brand_name);
-    //             setProducts(remaining);
-    //             console.log(remaining);
-    //         })
-    //     }
 
     return (
         <Link to={`/productCollection/${brand_name}`}>
@@ -28,15 +16,6 @@ const BrandCard = ({ card }) => {
                     <h2 className=" text-5xl py-16 font-bold md:ml-72 ">{brand_name}</h2>
                 </div>
             </div>
-
-            {/* {
-                products.map(product => <Porducts
-                    key={product._id}
-                    product={product}
-                    ></Porducts>)
-                    // products={products}
-                    // setProducts={setProducts}
-            } */}
 
         </Link>
     );
