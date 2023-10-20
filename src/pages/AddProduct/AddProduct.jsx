@@ -16,7 +16,7 @@ const AddProduct = () => {
         const newProduct = { name, image, brand_name, price, type, rating, description };
         console.log(newProduct);
 
-        fetch('http://localhost:5000/fashion', {
+        fetch('https://fashion-and-apparel-server-a10b8.vercel.app/fashion', {
             method: "POST",
             headers: {
                 'content-type': "application/json"

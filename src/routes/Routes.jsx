@@ -26,17 +26,17 @@ const routes = createBrowserRouter([
             {
                 path: "/productCollection/:brand_name",
                 element: <ProductCollection></ProductCollection>,
-                loader: ({ params }) => fetch(`http://localhost:5000/fashion/${params.brand_name}`)
+                loader: ({ params }) => fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${params.brand_name}`)
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/fashion/${params._id}`)
+                loader: ({ params }) => fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${params._id}`)
             },
             {
                 path: '/updateProduct/:id',
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/fashion/${params._id}`)
+                loader: ({ params }) => fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${params._id}`)
             },
             {
                 path: "/addProduct",

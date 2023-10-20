@@ -5,7 +5,7 @@ const ProductDetails = () => {
     console.log(details.name);
 
     // const handleDetails = () => {
-    //     fetch(`http://localhost:5000/fashion/${}`, {
+    //     fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${}`, {
 
     //     })
     //         .then(res => res.json())

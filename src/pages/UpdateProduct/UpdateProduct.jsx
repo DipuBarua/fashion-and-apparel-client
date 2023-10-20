@@ -22,7 +22,7 @@ const UpdateProduct = () => {
         const updatedProduct = { name, image, brand_name, price, type, rating, description };
         // console.log(updateProduct);
 
-        fetch(`http://localhost:5000/fashion/${_id}`, {
+        fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': "application/json",
@@ -36,7 +36,7 @@ const UpdateProduct = () => {
             })
 
 
-        // fetch(`http://localhost:5000/fashion/${_id}`, {
+        // fetch(`https://fashion-and-apparel-server-a10b8.vercel.app/fashion/${_id}`, {
         //     method: "PUT",
         //     headers: {
         //         'content-type': "application/json"
