@@ -1,8 +1,12 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 const UpdateProduct = () => {
     const product = useLoaderData();
-    const { _id } = product;
+    const { _id, name, image, brand_name, price, type, rating, description } = product;
+
+    console.log(product);
 
     const handleUpdate = event => {
         event.preventDefault();
@@ -15,20 +19,42 @@ const UpdateProduct = () => {
         const rating = form.rating.value;
         const description = form.description.value;
 
-        const updateProduct = { name, image, brand_name, price, type, rating, description };
-        console.log(updateProduct);
+        const updatedProduct = { name, image, brand_name, price, type, rating, description };
+        // console.log(updateProduct);
 
         fetch(`http://localhost:5000/fashion/${_id}`, {
-            method: "PUT",
+            method: 'PUT',
             headers: {
-                'content-type': "application/json"
+                'content-type': "application/json",
             },
-            body: JSON.stringify(updateProduct)
+            body: JSON.stringify(updatedProduct),
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+
             })
+
+
+        // fetch(`http://localhost:5000/fashion/${_id}`, {
+        //     method: "PUT",
+        //     headers: {
+        //         'content-type': "application/json"
+        //     },
+        //     body: JSON.stringify(updateProduct)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        // if (data.modifiedCount > 0) {
+        //     Swal.fire({
+        //         title: 'Update Successful',
+        //         text: 'successfully updated your product',
+        //         icon: 'success',
+        //         confirmButtonText: 'Cool'
+        //     })
+        // }
+        //     })
 
     }
 
@@ -44,19 +70,19 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" name="name" placeholder="product name" className="input input-bordered" required />
+                                    <input type="text" name="name" defaultValue={name} placeholder="product name" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Image</span>
                                     </label>
-                                    <input type="url" name="image" placeholder="product image url" className="input input-bordered" required />
+                                    <input type="url" name="image" defaultValue={image} placeholder="product image url" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Brand Name</span>
                                     </label>
-                                    <input type="text" name="brand_name" placeholder="Brand Name" className="input input-bordered" required />
+                                    <input type="text" name="brand_name" defaultValue={brand_name} placeholder="Brand Name" className="input input-bordered" />
                                 </div>
                             </div>
 
@@ -65,14 +91,14 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text">Price</span>
                                     </label>
-                                    <input type="number" name="price" placeholder="Product Price" className="input input-bordered" required />
+                                    <input type="number" name="price" defaultValue={price} placeholder="Product Price" className="input input-bordered" />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Type</span>
                                     </label>
-                                    <select name="type" className="select select-bordered">
+                                    <select name="type" defaultValue={type} className="select select-bordered">
                                         <option disabled value="DEFAULT">Product type</option>
                                         <option>Clothes</option>
                                         <option>Shoes</option>
@@ -88,7 +114,7 @@ const UpdateProduct = () => {
                                     <label className="label">
                                         <span className="label-text">Rating</span>
                                     </label>
-                                    <select name="rating" className="select select-bordered">
+                                    <select name="rating" defaultValue={rating} className="select select-bordered">
                                         <option disabled value="DEFAULT">select rating</option>
                                         <option>5 Stars</option>
                                         <option>4 Stars</option>
@@ -105,7 +131,7 @@ const UpdateProduct = () => {
                             <label className="label">
                                 <span className="label-text">Short Description</span>
                             </label>
-                            <input type="text" name="description" placeholder="Short description" className="input input-bordered" required />
+                            <input type="text" defaultValue={description} name="description" placeholder="Short description" className="input input-bordered" />
                         </div>
 
                         <div className="form-control mt-6">

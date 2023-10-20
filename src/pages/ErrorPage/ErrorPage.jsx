@@ -14,7 +14,7 @@ const ErrorPage = () => {
                 </div>
             }
             <span>Go Back </span>
-            <Link to={'/'}><button className="btn btn-outline">Home</button></Link>
+            <Link to={'/'}><button className="btn btn-outline ml-2">Home</button></Link>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const Porducts = ({ product }) => {
     const { _id, name, image, brand_name, price, type, rating, description } = product;
     console.log(product);
+    console.log(_id);
 
 
 
@@ -29,7 +30,7 @@ const Porducts = ({ product }) => {
                         <div className="badge badge-outline">Details</div>
                     </Link>
                     <Link to={`/updateProduct/${_id}`}>
-                        <div className="badge badge-outline">Update</div>
+                        <div className=" badge badge-outline">Update</div>
                     </Link>
                 </div>
             </div>
